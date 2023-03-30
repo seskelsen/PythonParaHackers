@@ -1,6 +1,6 @@
 import socket
 dominio = input("Digite o dominio: ")
-with open("venv/code/bruteforcedns.txt", "r") as arquivo:
+with open("code/bruteforcedns.txt", "r") as arquivo:
     bruteforce = arquivo.readlines()
 
 for nome in bruteforce:
