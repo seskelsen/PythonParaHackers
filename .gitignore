@@ -1,6 +1,5 @@
 /.history
 /.vscode
 /venv
-venv/pyvenv.cfg
-
-venv/pyvenv.cfg
+/venv/pyvenv.cfg
+/code/__pycache__
