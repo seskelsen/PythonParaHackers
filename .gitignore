@@ -3,3 +3,4 @@
 /venv
 /venv/pyvenv.cfg
 /code/__pycache__
+venv/pyvenv.cfg
