@@ -1,3 +1,3 @@
 import importacao
 nome = "Sigmar"
-importacao.printar()
+importacao.printar(nome)
