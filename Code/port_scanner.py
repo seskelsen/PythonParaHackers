@@ -1,6 +1,10 @@
 import socket
 
 host = input("Digite o alvo: ")
+
+if host == "":
+    host = "vulnweb.com"
+
 portas = [21, 22, 23, 25, 53, 80, 110, 143, 443, 587, 993, 995, 3306, 8080, 465, 8443, 106, 465]
 #for porta in portas:
 for porta in range(1000):
