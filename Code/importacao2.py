@@ -1,3 +1,5 @@
+"""teste de importação de módulos"""	
+
 import importacao
-nome = "Sigmar"
-importacao.printar(nome)
+NOME = "Sigmar"
+importacao.printar(NOME)
