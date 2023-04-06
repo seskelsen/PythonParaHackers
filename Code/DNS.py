@@ -1,102 +1,100 @@
 import dns.resolver
 
-#alvo = 'google.com' #alvo a ser pesquisado
-alvo = input('Digite o alvo: ') #alvo a ser pesquisado
+# alvo = 'google.com' #alvo a ser pesquisado
+alvo = input("Digite o alvo: ")  # alvo a ser pesquisado
 
 try:
-    result = dns.resolver.resolve(alvo, 'A') #realiza a consulta DNS
+    result = dns.resolver.resolve(alvo, "A")  # realiza a consulta DNS
     for ipval in result:
-        print('IPV4: ', ipval.to_text())
+        print("IPV4: ", ipval.to_text())
         ip_alvo = ipval.to_text()
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')	
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
 try:
-    result = dns.resolver.resolve(alvo, 'CNAME') 
+    result = dns.resolver.resolve(alvo, "CNAME")
     for cnameval in result:
-        print('CNAME: ', cnameval.target)
+        print("CNAME: ", cnameval.target)
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')	
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
 try:
-    result = dns.resolver.resolve(alvo, 'AAAA') 
+    result = dns.resolver.resolve(alvo, "AAAA")
     for val in result:
-        print('AAAA: ', val.to_text())
+        print("AAAA: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')	
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
 try:
-    result = dns.resolver.resolve(ip_alvo+'.in-addr.arpa', 'PTR')
+    result = dns.resolver.resolve(ip_alvo + ".in-addr.arpa", "PTR")
     for val in result:
-        print('PTR: ', val.to_text())
+        print("PTR: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')	
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
-#NS
+# NS
 try:
-    result = dns.resolver.resolve(alvo, 'NS')
+    result = dns.resolver.resolve(alvo, "NS")
     for val in result:
-        print('NS: ', val.to_text())
+        print("NS: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
-#MX
+# MX
 try:
-    result = dns.resolver.resolve(alvo, 'MX')
+    result = dns.resolver.resolve(alvo, "MX")
     for val in result:
-        print('MX: ', val.to_text())
+        print("MX: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
-#SOA
+# SOA
 try:
-    result = dns.resolver.resolve(alvo, 'SOA')
+    result = dns.resolver.resolve(alvo, "SOA")
     for val in result:
-        print('SOA: ', val.to_text())
+        print("SOA: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
-#TXT
+# TXT
 try:
-    result = dns.resolver.resolve(alvo, 'TXT')
+    result = dns.resolver.resolve(alvo, "TXT")
     for val in result:
-        print('TXT: ', val.to_text())
+        print("TXT: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
 
-#SRV
+# SRV
 try:
-    result = dns.resolver.resolve(alvo, 'SRV')
+    result = dns.resolver.resolve(alvo, "SRV")
     for val in result:
-        print('SRV: ', val.to_text())
+        print("SRV: ", val.to_text())
 except:
     pass
 
-#------------------------------------------------------------------------------------------------
-print('--------------------------------------------')
-
-
+# ------------------------------------------------------------------------------------------------
+print("--------------------------------------------")
