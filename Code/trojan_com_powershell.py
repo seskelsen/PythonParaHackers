@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-import os, base64
-arquivo1 =  raw_input("Arquivo 1: ")
+import os
+import base64
+
+arquivo1 =  input("Arquivo 1: ")
 nome_arquivo1 = os.path.basename(arquivo1)
 
 
